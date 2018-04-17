@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<modules>
-		<module>kite-service</module>
+		<module>kite-client</module>
 	</modules>
 
 	<name>kite</name>
