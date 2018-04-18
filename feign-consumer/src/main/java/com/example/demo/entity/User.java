@@ -18,6 +18,11 @@ public class User {
     private Boolean enable;
     private Integer age;
 
+    public User(String userName, Integer age) {
+        this.userName = userName;
+        this.age = age;
+    }
+
     public User(Long id, String userName, String cardNo, Integer sex, Boolean enable, Integer age) {
         this.id = id;
         this.userName = userName;

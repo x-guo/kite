@@ -26,9 +26,9 @@ public class HelloController {
     public String helloWorld() throws InterruptedException {
         ServiceInstance instance = discoveryClient.getInstances("kite").get(0);
 
-        /*int sleep = new Random().nextInt(2000);
+        int sleep = new Random().nextInt(3000);
         log.info("sleepTime:" + sleep);
-        Thread.sleep(sleep);*/
+        Thread.sleep(sleep);
 
         log.info("/hello/world, host:{} , service_id:{}",instance.getHost(), instance.getServiceId());
         return "hello world";
