@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @date 2018/3/30.
  */
 
-@FeignClient("kite")
+@FeignClient(value = "KITE")
 public interface HelloService {
 
     @RequestMapping("/hello/world")

@@ -8,6 +8,7 @@ import org.springframework.cloud.netflix.feign.FeignClient;
  * @date 2018/3/30.
  */
 
-public class RefactoryHelloService {
+@FeignClient(value = "KITE")
+public interface RefactoryHelloService extends com.example.demo.service.HelloService {
 
 }
