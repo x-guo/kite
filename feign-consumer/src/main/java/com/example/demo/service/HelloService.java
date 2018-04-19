@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.configs.HelloServiceFallback;
+import com.example.demo.configs.LoggerFeignConfiguration;
 import com.example.demo.entity.User;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @date 2018/3/30.
  */
 
-@FeignClient(name = "KITE", fallback = HelloServiceFallback.class)
+@FeignClient(name = "KITE", fallback = HelloServiceFallback.class , configuration = LoggerFeignConfiguration.class)
 public interface HelloService {
 
     @RequestMapping("/hello/world")
