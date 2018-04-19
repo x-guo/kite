@@ -12,10 +12,10 @@ import org.springframework.context.annotation.Bean;
 //@Configuration
 public class LoggerFeignConfiguration {
 
-    @Bean
+    /*@Bean
     Logger.Level loggerFeignLevel() {
         //NONE 不记录任何信息 BASIC:记录请求方法URL以及响应状态码和执行时间 HEADERS basic+请求头信息  FULL:记录所有的请求响应明细
         return Logger.Level.FULL;
-    }
+    }*/
 
 }
