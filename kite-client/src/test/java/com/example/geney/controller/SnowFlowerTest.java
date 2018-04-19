@@ -70,18 +70,16 @@ public class SnowFlowerTest {
         }
 
         public static void main(String[] args) {
+
+            Long startTimer = System.currentTimeMillis();
             SnowFlowerTest idWorker = new SnowFlowerTest(0, 0);
-            ExecutorService executor = Executors.newFixedThreadPool(100);
-            for (int i = 0; i < 1000; i++) {
-                executor.submit(new Runnable() {
-                    @Override
-                    public void run() {
-                        long id = idWorker.nextId();
-                        System.out.println(id);
-                    }
-                });
+            for (int i = 0; i < 100000; i++) {
+                long id = idWorker.nextId();
+                System.out.println(id);
             }
-            executor.shutdown();
+            Long endTimer = System.currentTimeMillis();
+
+            System.out.println(endTimer - startTimer);
         }
 
 }

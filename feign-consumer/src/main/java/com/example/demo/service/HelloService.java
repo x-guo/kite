@@ -12,10 +12,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author zhenyu.guo
+ * configuration = LoggerFeignConfiguration.class 开启日志
  * @date 2018/3/30.
  */
 
-@FeignClient(name = "KITE", fallback = HelloServiceFallback.class , configuration = LoggerFeignConfiguration.class)
+@FeignClient(name = "KITE", fallback = HelloServiceFallback.class)
 public interface HelloService {
 
     @RequestMapping("/hello/world")
