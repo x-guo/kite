@@ -17,6 +17,7 @@
 		<module>feign-consumer</module>
 		<module>eureka-server2</module>
 		<module>kite-service-api</module>
+		<module>api-gateway</module>
 	</modules>
 
 	<name>kite</name>
