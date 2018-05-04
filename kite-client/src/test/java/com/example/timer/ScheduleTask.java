@@ -13,7 +13,7 @@ public class ScheduleTask {
             final int d = 1;
             new Thread(() -> {
                 System.out.println(System.currentTimeMillis());
-                new Order(d,new ScheduleTime(15, TimeUnit.SECONDS),0);
+                new Order(d,new ScheduleTime(5, TimeUnit.SECONDS),0);
             }).start();
         }
     }

@@ -12,7 +12,7 @@ public class Order {
         this.id = id;
         this.time = time;
         this.status = status;
-        OrderSchedule.getInstance().startTask(new OrderFailure(this), time);
+        OrderSchedule.getInstance().startTask(new TimerFailure(this), time);
     }
 
     public boolean isAlive(){

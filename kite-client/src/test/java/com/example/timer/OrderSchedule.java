@@ -28,7 +28,8 @@ public class OrderSchedule {
     /**
      * 预约订单时调用，一段时间后订单失效
      */
-    public void startTask(OrderFailure task,ScheduleTime time){
-        manager.schedule(task,time.getDelay(),time.getTime());
+    public void startTask(TimerFailure task, ScheduleTime time){
+
+            manager.schedule(task,time.getDelay(),time.getTime());
     }
 }

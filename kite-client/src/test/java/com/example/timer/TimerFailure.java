@@ -7,11 +7,11 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author zhenyu.guo
  * @date 2018/4/20.
  */
-public class OrderFailure implements Runnable {
+public class TimerFailure implements Runnable {
     private Order order;
     private static Lock lock = new ReentrantLock();
 
-    public OrderFailure(Order order) {
+    public TimerFailure(Order order) {
         this.order = order;
     }
 
